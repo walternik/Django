@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Page Speed Comparison
+{% endblock %}
+
+
+{% block content %}
+  {% if request.user.is_authenticated %}
+    <h1 class="mb-6 text-3xl">Welcome {{ request.user.username }}!</h1>  
+  {% else %}
+    <h1 class="mb-6 text-3xl">Welcome!</h1>
+  {% endif %}
+  <a href="/new/" class="text-lg">Create New Comparison</a>
+{% endblock %}
